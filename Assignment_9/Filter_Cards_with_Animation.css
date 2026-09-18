@@ -1,0 +1,232 @@
+/* =================================
+   RESET
+   ================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =================================
+   BODY
+   ================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f4f4f4;
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+header {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =================================
+   MAIN
+   ================================= */
+
+main {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 30px;
+}
+
+
+/* =================================
+   PROFILE CONTAINER
+   Flexbox layout
+   ================================= */
+
+.profile-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+/* =================================
+   PROFILE CARD
+   ================================= */
+
+.profile-card {
+    flex: 1;
+
+    max-width: 320px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px #aaa;
+
+    /* Fade-in animation */
+    animation: fadeIn 1s ease forwards;
+
+    transition: 0.3s;
+}
+
+
+/* =================================
+   Animation delays
+   ================================= */
+
+.profile-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.profile-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+
+/* =================================
+   PROFILE IMAGE
+   ================================= */
+
+.profile-card img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+/* =================================
+   CSS FILTERS
+   ================================= */
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+.brightness {
+    filter: brightness(70%);
+}
+
+
+/* =================================
+   REMOVE FILTER ON HOVER
+   ================================= */
+
+.profile-card:hover img {
+    filter: none;
+}
+
+
+/* =================================
+   CARD HOVER
+   ================================= */
+
+.profile-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px #999;
+}
+
+
+/* =================================
+   PROFILE CONTENT
+   ================================= */
+
+.profile-content {
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+.profile-content h2 {
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   FADE-IN ANIMATION
+   ================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =================================
+   MOBILE
+   Below 800px cards stack vertically
+   ================================= */
+
+@media (max-width: 800px) {
+
+    .profile-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 90%;
+        max-width: 400px;
+    }
+
+}

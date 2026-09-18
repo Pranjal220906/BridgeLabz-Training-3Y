@@ -1,0 +1,135 @@
+/* =================================
+   RESET
+   ================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =================================
+   BODY
+   ================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f4f4f4;
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+header {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =================================
+   MAIN
+   ================================= */
+
+main {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =================================
+   CONTENT
+   ================================= */
+
+.content {
+    max-width: 900px;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px #bbb;
+}
+
+
+/* =================================
+   RESPONSIVE HEADING
+   ================================= */
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   RESPONSIVE PARAGRAPH
+   ================================= */
+
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    h1 {
+        margin-bottom: 18px;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+
+}

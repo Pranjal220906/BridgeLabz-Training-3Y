@@ -1,0 +1,129 @@
+/* =================================
+   ELEMENT SELECTOR
+   Selects all elements of a type
+   ================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* Main */
+
+main {
+    padding: 30px;
+}
+
+
+/* Section */
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   CLASS SELECTOR
+   Selects elements having a class
+   ================================= */
+
+.highlight {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+}
+
+
+/* =================================
+   ID SELECTOR
+   Selects an element using its ID
+   ================================= */
+
+#special {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* =================================
+   ATTRIBUTE SELECTOR
+   Selects elements based on attributes
+   ================================= */
+
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid blue;
+}
+
+
+/* =================================
+   CHILD COMBINATOR >
+   Selects only direct children
+   ================================= */
+
+.parent > p {
+    color: purple;
+}
+
+
+/* =================================
+   ADJACENT SIBLING +
+   Selects the immediate next sibling
+   ================================= */
+
+h3 + p {
+    color: brown;
+}
+
+
+/* =================================
+   GENERAL SIBLING ~
+   Selects all matching siblings
+   ================================= */
+
+h3 ~ p {
+    background-color: #eee;
+    padding: 5px;
+}
+
+
+/* =================================
+   DESCENDANT SELECTOR
+   Selects elements inside another element
+   ================================= */
+
+.descendant p {
+    color: darkblue;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,209 @@
+/* =================================
+   BASIC PAGE STYLING
+   ================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =================================
+   BUTTON CONTAINER
+   Flexbox is used for alignment
+   ================================= */
+
+.button-container {
+    min-height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    padding: 40px;
+}
+
+
+/* Individual button box */
+
+.button-box {
+    width: 230px;
+    min-height: 220px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px #bbb;
+}
+
+
+/* Heading */
+
+.button-box h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Common button styling */
+
+.btn {
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   PRIMARY BUTTON
+   ================================= */
+
+.primary {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+
+    box-shadow: 0 5px 10px #aaa;
+}
+
+
+/* Primary hover */
+
+.primary:hover {
+    background-color: #0056b3;
+}
+
+
+/* =================================
+   SECONDARY BUTTON
+   ================================= */
+
+.secondary {
+    background-color: #555;
+    color: white;
+    border: 2px solid #555;
+
+    box-shadow: 0 5px 10px #aaa;
+}
+
+
+/* Secondary hover */
+
+.secondary:hover {
+    background-color: #333;
+}
+
+
+/* =================================
+   OUTLINE BUTTON
+   ================================= */
+
+.outline {
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+
+/* Outline hover */
+
+.outline:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+/* =================================
+   ACTIVE PSEUDO-CLASS
+   Button changes while pressed
+   ================================= */
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+
+/* =================================
+   FOCUS PSEUDO-CLASS
+   Shows focus outline
+   ================================= */
+
+.btn:focus {
+    outline: 4px solid #ffcc00;
+}
+
+
+/* =================================
+   DISABLED PSEUDO-CLASS
+   ================================= */
+
+.btn:disabled {
+    background-color: #aaa;
+    color: #555;
+
+    border-color: #aaa;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-box {
+        width: 90%;
+    }
+
+}
