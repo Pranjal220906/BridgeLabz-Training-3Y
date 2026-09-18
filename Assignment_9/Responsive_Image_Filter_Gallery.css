@@ -1,0 +1,148 @@
+/* =================================
+   BASIC PAGE STYLING
+   ================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   IMAGE GALLERY
+   CSS Grid with auto-fit
+   ================================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
+
+    gap: 25px;
+
+    padding: 40px;
+}
+
+
+/* =================================
+   IMAGE CARD
+   ================================= */
+
+.image-card {
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px #aaa;
+}
+
+
+/* =================================
+   COMMON IMAGE STYLING
+   ================================= */
+
+.image-card img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: filter 0.5s ease;
+}
+
+
+/* =================================
+   DIFFERENT CSS FILTERS
+   ================================= */
+
+.blur {
+    filter: blur(3px);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+.brightness {
+    filter: brightness(150%);
+}
+
+.contrast {
+    filter: contrast(200%);
+}
+
+.hue {
+    filter: hue-rotate(120deg);
+}
+
+
+/* =================================
+   REMOVE FILTER ON HOVER
+   ================================= */
+
+.image-card img:hover {
+    filter: none;
+}
+
+
+/* =================================
+   CAPTION
+   ================================= */
+
+figcaption {
+    text-align: center;
+
+    padding: 15px;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* =================================
+   MOBILE
+   Stack images in one column
+   ================================= */
+
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+}
